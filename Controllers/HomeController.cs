@@ -16,12 +16,18 @@ public class HomeController : Controller
     
     public IActionResult Index()
     {  
-            ViewBag.Palabra = Juego.MostrarPalabra();
-            ViewBag.Intentos = Juego.intentos;
-            ViewBag.LetrasUsadas = Juego.letrasUsadas;
-            ViewBag.Terminado = Juego.juegoTerminado;
-            ViewBag.Secreta = Juego.palabraSecreta;
+            
         return View();
+    }
+    public IActionResult NuevaPartida(){
+        Juego.IniciarJuego();
+        return View("Jugar");
+            ViewBag.Palabra = Juego.MostrarPalabra();
+    ViewBag.Intentos = Juego.intentos;
+    ViewBag.LetrasUsadas = Juego.letrasUsadas;
+    ViewBag.Terminado = Juego.juegoTerminado;
+    ViewBag.Secreta = Juego.palabraSecreta;
+
     }
     
        

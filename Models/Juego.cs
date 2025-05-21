@@ -2,8 +2,9 @@ namespace TP04_Ahorcado.Models
 {
     public static class Juego
     {
-        public static List<string> palabras = new List<string> { "computadora", "programacion", "ahorcado", "teclado" };
-        public static string palabraSecreta = "";
+        public static string palabraSecreta = ""; 
+      public static List<string> palabras = new List<string> { "computadora", "programacion", "ahorcado", "teclado" };
+
         public static List<char> letrasUsadas = new List<char>();
         public static int intentos = 0;
         public static bool juegoTerminado = false;
@@ -36,7 +37,6 @@ namespace TP04_Ahorcado.Models
             }
             return resultado;
         }
-
 
         public static void ProbarLetra(char letra)
         {

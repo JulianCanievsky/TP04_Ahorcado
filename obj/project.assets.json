@@ -8,30 +8,24 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\49550988\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\49550988\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\49550988\\Downloads\\TP04_Ahorcado\\TP04_Canievsky.csproj",
+      "projectUniqueName": "C:\\Users\\49550988\\TP04_Ahorcado\\TP04_Canievsky.csproj",
       "projectName": "TP04_Canievsky",
-      "projectPath": "C:\\Users\\49550988\\Downloads\\TP04_Ahorcado\\TP04_Canievsky.csproj",
+      "projectPath": "C:\\Users\\49550988\\TP04_Ahorcado\\TP04_Canievsky.csproj",
       "packagesPath": "C:\\Users\\49550988\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\49550988\\Downloads\\TP04_Ahorcado\\obj\\",
+      "outputPath": "C:\\Users\\49550988\\TP04_Ahorcado\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\49550988\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\49550988\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

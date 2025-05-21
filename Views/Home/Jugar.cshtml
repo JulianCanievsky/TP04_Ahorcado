@@ -1,0 +1,25 @@
+<h2>Juego del Ahorcado</h2>
+
+<p>Palabra: @ViewBag.Palabra</p>
+<p>Intentos: @ViewBag.Intentos</p>
+<p>Letras usadas: @ViewBag.LetrasUsadas</p>
+
+<form method="post" action="/Juego/ProbarLetra">
+    <input type="text" name="letra" maxlength="1" placeholder="Escribí una letra" />
+    <button type="submit">Probar letra</button>
+</form>
+
+<br />
+
+<form method="post" action="/Juego/ProbarPalabra">
+    <input type="text" name="palabra" placeholder="Arriesgar palabra" />
+    <button type="submit">Probar palabra</button>
+</form>
+
+<br />
+
+<p>La palabra era: @ViewBag.Secreta</p>
+
+<form method="get" action="/Juego/Index">
+    <button type="submit">Jugar de nuevo</button>
+</form>

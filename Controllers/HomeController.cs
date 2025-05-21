@@ -15,7 +15,51 @@ public class HomeController : Controller
 
     
     public IActionResult Index()
-    {
+    {  
+            ViewBag.Palabra = Juego.MostrarPalabra();
+            ViewBag.Intentos = Juego.intentos;
+            ViewBag.LetrasUsadas = Juego.letrasUsadas;
+            ViewBag.Terminado = Juego.juegoTerminado;
+            ViewBag.Secreta = Juego.palabraSecreta;
         return View();
     }
-}
+    
+       
+        [HttpPost]
+        public IActionResult ProbarLetra(char letra)
+        {
+            if(letra != null){
+            char a = letra; 
+                Juego.ProbarLetra(a);
+            
+            }
+             
+            ViewBag.Palabra = Juego.MostrarPalabra();
+            ViewBag.Intentos = Juego.intentos;
+            ViewBag.LetrasUsadas = Juego.letrasUsadas;
+            ViewBag.Terminado = Juego.juegoTerminado;
+            ViewBag.Secreta = Juego.palabraSecreta;
+
+            return View("Jugar");
+        }
+
+        
+        [HttpPost]
+        public IActionResult ProbarPalabra(string palabra)
+        {
+        
+            if (palabra != null){
+            Juego.ProbarPalabra(palabra);
+            
+            }
+
+            ViewBag.Palabra = Juego.MostrarPalabra();
+            ViewBag.Intentos = Juego.intentos;
+            ViewBag.LetrasUsadas = Juego.letrasUsadas;
+            ViewBag.Terminado = Juego.juegoTerminado;
+            ViewBag.Secreta = Juego.palabraSecreta;
+
+            return View("Jugar");
+        }
+    }
+

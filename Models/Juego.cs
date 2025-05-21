@@ -1,4 +1,4 @@
-namespace TP04_Ahorcado.Models
+namespace TP04_Canievsky.Models
 {
     public static class Juego
     {

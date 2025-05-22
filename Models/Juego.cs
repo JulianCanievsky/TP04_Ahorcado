@@ -31,29 +31,28 @@ namespace TP04_Canievsky.Models
                      resultado += letra;
                 }   
                 else{
-                resultado += "_";
+                resultado += "_ ";
                 }
                     
             }
             return resultado;
         }
 
-        public static void ProbarLetra(char letra)
+        public static void ProbarLetras(char letra)
         {
             if (!letrasUsadas.Contains(letra) && !juegoTerminado)
             {
                 letrasUsadas.Add(letra);
-                if (!palabraSecreta.Contains(letra))
-                {
-                    intentos++;
-                }
-               
+              
+               intentos++;
             }
+            
         }
 
 
-        public static void ProbarPalabra(string palabra)
+        public static bool ProbarPalabra(string palabra)
         {
+            bool gano = false;
             if (!juegoTerminado)
             {
                 if (palabra == palabraSecreta)
@@ -62,11 +61,12 @@ namespace TP04_Canievsky.Models
                         if (!letrasUsadas.Contains(letra)){
                             letrasUsadas.Add(letra);
                         }
-                            
+                        gano = true;    
                 }
              
                 juegoTerminado = true;
             }
+            return gano;
         }
 
 

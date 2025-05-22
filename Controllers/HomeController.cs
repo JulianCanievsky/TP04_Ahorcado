@@ -21,13 +21,13 @@ public class HomeController : Controller
     }
     public IActionResult NuevaPartida(){
         Juego.IniciarJuego();
-        return View("Jugar");
+     
             ViewBag.Palabra = Juego.MostrarPalabra();
     ViewBag.Intentos = Juego.intentos;
     ViewBag.LetrasUsadas = Juego.letrasUsadas;
     ViewBag.Terminado = Juego.juegoTerminado;
     ViewBag.Secreta = Juego.palabraSecreta;
-
+   return View("Jugar");
     }
     
        
@@ -36,8 +36,14 @@ public class HomeController : Controller
         {
             if(letra != null){
             char a = letra; 
-                Juego.ProbarLetra(a);
+                Juego.ProbarLetras(a);
             
+            }
+            if(Juego.palabraSecreta == Juego.MostrarPalabra()){
+                string resultado = "¡GANASTE!";
+                ViewBag.resultado = resultado;
+                ViewBag.Secreta = Juego.palabraSecreta;
+                return View("resultado");
             }
              
             ViewBag.Palabra = Juego.MostrarPalabra();
@@ -54,18 +60,19 @@ public class HomeController : Controller
         public IActionResult ProbarPalabra(string palabra)
         {
         
+            string resultado = "Perdiste";
             if (palabra != null){
-            Juego.ProbarPalabra(palabra);
             
+            if(Juego.ProbarPalabra(palabra)){
+                resultado = "Ganaste";
             }
+            }
+            
 
-            ViewBag.Palabra = Juego.MostrarPalabra();
-            ViewBag.Intentos = Juego.intentos;
-            ViewBag.LetrasUsadas = Juego.letrasUsadas;
-            ViewBag.Terminado = Juego.juegoTerminado;
+            ViewBag.resultado= resultado;
             ViewBag.Secreta = Juego.palabraSecreta;
 
-            return View("Jugar");
+            return View("resultado");
         }
     }
 

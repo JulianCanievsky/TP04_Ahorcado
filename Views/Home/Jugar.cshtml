@@ -1,8 +1,17 @@
+@{
+            <link rel="stylesheet" href="~/css/style.css" asp-append-version="true">
+
+}
 <h2>Juego del Ahorcado</h2>
 
 <p>Palabra: @ViewBag.Palabra</p>
 <p>Intentos: @ViewBag.Intentos</p>
-<p>Letras usadas: @ViewBag.LetrasUsadas</p>
+<p>Letras Arriesgadas: 
+
+ @for(int i = 0; i < ViewBag.LetrasUsadas.Count; i++){
+    @ViewBag.LetrasUsadas[i];   
+ }</p>
+
 
 <form method="post" action="/Home/ProbarLetra">
     <input type="text" name="letra" maxlength="1" placeholder="Escribi una letra" />

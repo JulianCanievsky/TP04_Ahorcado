@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OUVaL3qGrO7neZ3AA4+NUL+UzlaXy/kRNJ1xXbMyFzY=",
+  "Hash": "/iWztW87SBO9z9KQ87QrLtWSU2Thuf+4zo9yoO7lN+8=",
   "Source": "TP04_Canievsky",
   "BasePath": "_content/TP04_Canievsky",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\49550988\\TP04_Ahorcado\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\49550988\\TP04_Ahorcado\\wwwroot\\css\\style.css",
       "SourceId": "TP04_Canievsky",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\49550988\\TP04_Ahorcado\\wwwroot\\",
       "BasePath": "_content/TP04_Canievsky",
-      "RelativePath": "css/site.css",
+      "RelativePath": "css/style.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -33,7 +33,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\site.css"
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
       "Identity": "C:\\Users\\49550988\\TP04_Ahorcado\\wwwroot\\favicon.ico",

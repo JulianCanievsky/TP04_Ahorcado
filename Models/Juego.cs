@@ -3,7 +3,12 @@ namespace TP04_Canievsky.Models
     public static class Juego
     {
         public static string palabraSecreta = ""; 
-      public static List<string> palabras = new List<string> { "computadora", "programacion", "ahorcado", "teclado" };
+      public static List<string> palabras = new List<string> {"COMPUTADORA", "PROGRAMACION", "TECLADO", "RATON", "PANTALLA", "CODIGO", "INTERNET", "REDES", "USUARIO", "SOFTWARE",
+    "HARDWARE", "JUEGO", "AHORCADO", "CONSOLA", "ARCHIVO", "MENSAJE", "PAGINA", "CONTRASEÑA", "NAVEGADOR", "SERVIDOR",
+    "INGENIERO", "SISTEMA", "MEMORIA", "MONITOR", "ALMACENAMIENTO", "CARGADOR", "BATERIA", "CELULAR", "CORREO", "BUSCADOR",
+    "PROCESADOR", "CABLE", "TECNOLOGIA", "APLICACION", "DESCARGA", "ACTUALIZACION", "PLATAFORMA", "INICIO", "SEGURIDAD", "BASE",
+    "DATOS", "CUENTA", "PERFIL", "FOTO", "VIDEO", "CLAVE", "RED", "MENÚ", "SEÑAL", "BOTON", "CLIC", "USAR", "EDITAR"};
+
 
         public static List<char> letrasUsadas = new List<char>();
         public static int intentos = 0;
@@ -13,7 +18,7 @@ namespace TP04_Canievsky.Models
         public static void IniciarJuego()
         {
              Random rd = new Random();
-            int rand_num = rd.Next(0, 4);
+            int rand_num = rd.Next(0, palabras.Count());
             palabraSecreta = palabras[rand_num];
             letrasUsadas.Clear();
             intentos = 0;
